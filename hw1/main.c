@@ -91,7 +91,7 @@ int print_array (int lotto_array[6]) {
 int print_last(int num_row) {
     FILE* fp;
     fp = fopen("lotto.txt", "a+");
-    for(int i = num_row+1; i <= 6; i++) {
+    for(int i = num_row+1; i < 6; i++) {
         fprintf(fp,"[%d]: " , i);
         for(int j = 0; j < 6; j++) {
             fprintf(fp, "-- ");
