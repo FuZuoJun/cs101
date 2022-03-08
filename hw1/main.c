@@ -7,11 +7,11 @@ void print_vorform(int i) {
     fp = fopen("lotto.txt", "a+");
     time_t curtime;
     time(&curtime);
-    fprintf(fp, "======== lotto649 =========\n=");
+    fprintf(fp, "======== lotto649 =========\n= ");
     fwrite(ctime(&curtime), 24, 1, fp);
     fseek(fp, 0, SEEK_SET);
     fread(ctime(&curtime), 24, 1, fp);
-    fprintf(fp," =\n");
+    fprintf(fp,"=\n");
     fclose(fp);
 }
 
@@ -41,7 +41,7 @@ int rand_num_mod11(int lotto_array) {
 
 int get_rad_num(int lotto_array[7]) {
     for(int j = 0; j < 7; j++) {
-        if(j < 5){
+        if(j < 6){
             lotto_array[j] = rand_num_mod70(lotto_array[j]);
         } else if (j = 6) {
             lotto_array[6] = rand_num_mod11(lotto_array[6]);
@@ -109,11 +109,11 @@ int main() {
     print_vorform(row_num);
     srand((unsigned) curtime);
     for (int i = 1; i <= row_num; i++) {
-        int lotto_array[7] = {0};
+        int lotto_array[8] = {0};
         get_rad_num(lotto_array);
         fwriteforma(i);
-        lotto_array[7] = array_rerandom(lotto_array);
-        lotto_array[7] = array_swap(lotto_array);
+        lotto_array[8] = array_rerandom(lotto_array);
+        lotto_array[8] = array_swap(lotto_array);
         print_array(lotto_array);
     }
     print_last(row_num);
