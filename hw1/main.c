@@ -106,17 +106,17 @@ int main() {
     int row_num = 2;
     time_t curtime;
     time(&curtime);
-    print_vorform(row_num); //fprintf1
+    print_vorform(row_num);
     srand((unsigned) curtime);
     for (int i = 1; i <= row_num; i++) {
         int lotto_array[7] = {0};
         get_rad_num(lotto_array);
-        fwriteforma(i); //fprintf2
+        fwriteforma(i);
         lotto_array[7] = array_rerandom(lotto_array);
         lotto_array[7] = array_swap(lotto_array);
-        print_array(lotto_array); //fprintf3
+        print_array(lotto_array);
     }
-    print_last(row_num); //fprintf4
+    print_last(row_num);
     fclose(fp);
     return 0;
 }
