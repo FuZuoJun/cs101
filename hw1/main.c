@@ -47,7 +47,6 @@ int get_rad_num(int lotto_array[7]) {
         } else if (j = 6) {
             lotto_array[6] = rand_num_mod11(lotto_array[6]);
         }
-        //check lotto array[i] isn't 0;
     }
     return lotto_array[7];
 }
