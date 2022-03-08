@@ -40,7 +40,6 @@ int rand_num_mod11(int lotto_array) {
 }
 
 int get_rad_num(int lotto_array[7]) {
-
     for(int j = 0; j < 7; j++) {
         if(j < 5){
             lotto_array[j] = rand_num_mod70(lotto_array[j]);
